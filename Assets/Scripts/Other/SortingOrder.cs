@@ -5,26 +5,43 @@ using UnityEngine;
 public class SortingOrder : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
+    private Transform targetOrder;
 
-    private Transform target;
+    [SerializeField] private bool isYBigger;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-
-        target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    private void Update()
+    private void Start()
     {
-        if (target.transform.position.y > transform.position.y)
+        targetOrder = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
+    private void LateUpdate()
+    {
+        if (!isYBigger)
         {
-            spriteRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * -10f);
+            if (targetOrder.transform.position.y > transform.position.y)
+            {
+                spriteRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * -10f);
+            }
+            else
+            {
+                spriteRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * 10f);
+            }
         }
         else
         {
-            spriteRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * 10f);
+            if (targetOrder.transform.position.y > transform.position.y)
+            {
+                spriteRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * 10f);
+            }
+            else
+            {
+                spriteRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * -10f);
+            }
         }
-
     }
 }
