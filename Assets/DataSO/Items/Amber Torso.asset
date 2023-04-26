@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItem: Amber Torso
   isStackable: 0
+  bodyPart: {fileID: 11400000, guid: f3bd5a83d44dab54cb520378af5e7546, type: 2}
   icon: {fileID: 708395550, guid: cf4c063081f9ad145808e0fb8ae13cd5, type: 3}
   buyPrice: 100
   sellPrice: 25

@@ -174,7 +174,7 @@ SpriteRenderer:
   m_SortingLayerID: -954655631
   m_SortingLayer: 4
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1414382902, guid: 993cb996aba5c5e4aacdbbc8b0ee2629, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -182,7 +182,7 @@ SpriteRenderer:
   m_Size: {x: 0.6875, y: 0.65625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &565150259
@@ -258,7 +258,7 @@ SpriteRenderer:
   m_SortingLayerID: -954655631
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -373819800, guid: 4aeb588360c39df47b182ff5a6a08476, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -266,7 +266,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &668406130
@@ -342,7 +342,7 @@ SpriteRenderer:
   m_SortingLayerID: -954655631
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1042666861, guid: fcf582119c12c104988b1f86522591f6, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -350,7 +350,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1342458896
@@ -533,7 +533,7 @@ SpriteRenderer:
   m_SortingLayerID: -954655631
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2133748904, guid: 92401a9619c1de64c94ce9d3b4a79c4b, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -541,7 +541,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2324906237547849057
@@ -617,7 +617,7 @@ SpriteRenderer:
   m_SortingLayerID: -954655631
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -684908683, guid: 8e6205b7b55e31244b96fcb9f9a17f35, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -625,7 +625,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2324906237595854618
@@ -701,7 +701,7 @@ SpriteRenderer:
   m_SortingLayerID: -954655631
   m_SortingLayer: 4
   m_SortingOrder: -10
-  m_Sprite: {fileID: 1196261865, guid: b8db2ddea26b57a4f8230f968575a284, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -709,7 +709,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2324906237932039475
@@ -727,6 +727,7 @@ GameObject:
   - component: {fileID: 2324906237932039477}
   - component: {fileID: 7080461735352267749}
   - component: {fileID: 2010545240}
+  - component: {fileID: 2010545242}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -766,7 +767,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2324906237932039475}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -903,6 +904,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2010545242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2324906237932039475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c6667779496c5848bd7ee3f3e6576bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterBody: {fileID: 11400000, guid: 2e959929b66b64c4681421a1c086b8dd, type: 2}
+  bodyPartTypes:
+  - Head
+  - Body
+  - Hair
+  - Torso
+  - Legs
+  - Shoes
+  characterStates:
+  - idle
+  - walk
+  characterDirections:
+  - down
+  - right
+  - left
+  - up
 --- !u!1 &2324906238651255027
 GameObject:
   m_ObjectHideFlags: 0

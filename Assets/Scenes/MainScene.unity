@@ -23520,6 +23520,84 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1f0f42ae6bec7742b681f8b34613d8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &591618443
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 591618444}
+  - component: {fileID: 591618445}
+  m_Layer: 0
+  m_Name: Body Parts Selection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &591618444
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591618443}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2069777108}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &591618445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591618443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af83f97767eb21141a146aea15ce48e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterBody: {fileID: 11400000, guid: 2e959929b66b64c4681421a1c086b8dd, type: 2}
+  bodyPartSelections:
+  - bodyPartName: Head
+    bodyPartOptions:
+    - {fileID: 11400000, guid: f9dcb32783f2fc04f800b2e52670ef5f, type: 2}
+    bodyPartNameTextComponent: {fileID: 0}
+    bodyPartCurrentIndex: 0
+  - bodyPartName: Body
+    bodyPartOptions:
+    - {fileID: 11400000, guid: 4ce87a0c772e3bd42a18cca22f4d1962, type: 2}
+    bodyPartNameTextComponent: {fileID: 0}
+    bodyPartCurrentIndex: 0
+  - bodyPartName: Hair
+    bodyPartOptions:
+    - {fileID: 11400000, guid: 6f5a20f3ba58f9643ab2ac68952b145d, type: 2}
+    bodyPartNameTextComponent: {fileID: 0}
+    bodyPartCurrentIndex: 0
+  - bodyPartName: Torso
+    bodyPartOptions:
+    - {fileID: 11400000, guid: 6bfc48bea117ecb4a8921bb846c0d4d3, type: 2}
+    - {fileID: 11400000, guid: f3bd5a83d44dab54cb520378af5e7546, type: 2}
+    bodyPartNameTextComponent: {fileID: 0}
+    bodyPartCurrentIndex: 0
+  - bodyPartName: Legs
+    bodyPartOptions:
+    - {fileID: 11400000, guid: cce921febe6fd22499051fcae92355ef, type: 2}
+    - {fileID: 11400000, guid: b103b3dc86b2bdc4489ae033595ff760, type: 2}
+    bodyPartNameTextComponent: {fileID: 0}
+    bodyPartCurrentIndex: 0
+  - bodyPartName: Shoes
+    bodyPartOptions:
+    - {fileID: 11400000, guid: ed449e18053aa5d4f9e1e15b16328cbd, type: 2}
+    bodyPartNameTextComponent: {fileID: 0}
+    bodyPartCurrentIndex: 0
 --- !u!1001 &597754686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39294,6 +39372,7 @@ GameObject:
   - component: {fileID: 1868917986}
   - component: {fileID: 1868917989}
   - component: {fileID: 1868917988}
+  - component: {fileID: 1868917990}
   - component: {fileID: 1868917987}
   m_Layer: 0
   m_Name: Player Preview
@@ -39368,6 +39447,34 @@ SortingGroup:
   m_SortingLayerID: -1548585271
   m_SortingLayer: 5
   m_SortingOrder: 300
+--- !u!114 &1868917990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868917985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c6667779496c5848bd7ee3f3e6576bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterBody: {fileID: 11400000, guid: 2e959929b66b64c4681421a1c086b8dd, type: 2}
+  bodyPartTypes:
+  - Head
+  - Body
+  - Hair
+  - Torso
+  - Legs
+  - Shoes
+  characterStates:
+  - idle
+  - walk
+  characterDirections:
+  - down
+  - right
+  - left
+  - up
 --- !u!1 &1887265005
 GameObject:
   m_ObjectHideFlags: 0
@@ -42000,6 +42107,7 @@ Transform:
   - {fileID: 1258847452}
   - {fileID: 424972051}
   - {fileID: 636177069}
+  - {fileID: 591618444}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43433,6 +43541,7 @@ GameObject:
   - component: {fileID: 7277646921476691911}
   - component: {fileID: 2514085784563672250}
   - component: {fileID: 7277646921476691912}
+  - component: {fileID: 7277646921476691913}
   - component: {fileID: 4953076367202993837}
   m_Layer: 0
   m_Name: Player Preview
@@ -43476,6 +43585,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d84177405cdab3488aa2d2369274838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7277646921476691913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7277646921476691910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c6667779496c5848bd7ee3f3e6576bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterBody: {fileID: 11400000, guid: 2e959929b66b64c4681421a1c086b8dd, type: 2}
+  bodyPartTypes:
+  - Head
+  - Body
+  - Hair
+  - Torso
+  - Legs
+  - Shoes
+  characterStates:
+  - idle
+  - walk
+  characterDirections:
+  - down
+  - right
+  - left
+  - up
 --- !u!212 &7277646922120688128
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -1,11 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Globalization;
 using TMPro;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
 
 public class ShopButton : MonoBehaviour
 {
@@ -57,6 +53,13 @@ public class ShopButton : MonoBehaviour
             CurrencyManager.instance.coin -= slot.itemDataSO.buyPrice;
 
             StartCoroutine(DelayOnOff($"You Bough Some {slot.itemDataSO.nameItem}"));
+
+            if (slot.itemDataSO.bodyPart != null)
+            {
+                BodyPartsSelector.Instance.NextBodyPart(slot.itemDataSO.bodyPart.bodyPartIndexSelectoer);
+                PlayerController.instance.gameObject.GetComponent<BodyPartsManager>().UpdateBodyParts();
+                BodyPartsManager.instance.UpdateBodyParts();
+            }
         }
         else
         {
@@ -80,6 +83,13 @@ public class ShopButton : MonoBehaviour
             StartCoroutine(DelayOnOff($"You Sell Some {slot.itemDataSO.nameItem}"));
 
             CurrencyManager.instance.coin += slot.itemDataSO.sellPrice;
+
+            if (slot.itemDataSO.bodyPart != null)
+            {
+                BodyPartsSelector.Instance.PreviousBody(slot.itemDataSO.bodyPart.bodyPartIndexSelectoer);
+                PlayerController.instance.gameObject.GetComponent<BodyPartsManager>().UpdateBodyParts();
+                BodyPartsManager.instance.UpdateBodyParts();
+            }
         }
         else
         {

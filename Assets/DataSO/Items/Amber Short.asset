@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItem: Amber Short
   isStackable: 0
+  bodyPart: {fileID: 11400000, guid: b103b3dc86b2bdc4489ae033595ff760, type: 2}
   icon: {fileID: -618521668, guid: 7872372633ac2e040a0ba0d500b090e1, type: 3}
   buyPrice: 50
   sellPrice: 25

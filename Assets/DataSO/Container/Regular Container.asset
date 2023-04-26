@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Regular Container
   m_EditorClassIdentifier: 
   slots:
-  - itemDataSO: {fileID: 11400000, guid: f8822a9e0cf47144687ea08eb0f7a736, type: 2}
-    count: 0
-  - itemDataSO: {fileID: 11400000, guid: b5b2218d013429c489ef92c99c101735, type: 2}
-    count: 0
   - itemDataSO: {fileID: 11400000, guid: 2e7a1deb9e255444faa344ff588fb217, type: 2}
-    count: 21
+    count: 300
   - itemDataSO: {fileID: 11400000, guid: ed5c1b1916df91c43a752ce5279036e2, type: 2}
     count: 105
   - itemDataSO: {fileID: 11400000, guid: 97986080e31f3754aa87035f73722694, type: 2}
     count: 100
+  - itemDataSO: {fileID: 11400000, guid: f8822a9e0cf47144687ea08eb0f7a736, type: 2}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
   - itemDataSO: {fileID: 0}
     count: 0
   - itemDataSO: {fileID: 0}

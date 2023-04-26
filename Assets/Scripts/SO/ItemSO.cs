@@ -7,6 +7,7 @@ public class ItemSO : ScriptableObject
 {
     public string nameItem;
     public bool isStackable;
+    public BodyPartSO bodyPart;
     public Sprite icon;
     public int buyPrice;
     public int sellPrice;

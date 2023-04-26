@@ -25,7 +25,7 @@ public class CurrencyManager : MonoBehaviour
 
     private void Start()
     {
-        coin = 200;
+        coin = 300;
     }
 
     private void Update()
