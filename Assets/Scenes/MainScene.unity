@@ -23168,7 +23168,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734836579}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.04, y: 8.1, z: -10}
+  m_LocalPosition: {x: 9.25, y: 8.03, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -28940,6 +28940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f9790af9400e5c429b2438179a8f4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inShopTrigger: 0
 --- !u!224 &1509155010 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8795039431240662143, guid: e8f805421e8c0d64199074644650d2f1, type: 3}
@@ -33541,11 +33542,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2324906237932039474, guid: 8218a49aaa4fd764e8e6308d5a185ee7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.04
+      value: 9.25
       objectReference: {fileID: 0}
     - target: {fileID: 2324906237932039474, guid: 8218a49aaa4fd764e8e6308d5a185ee7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.1
+      value: 8.03
       objectReference: {fileID: 0}
     - target: {fileID: 2324906237932039474, guid: 8218a49aaa4fd764e8e6308d5a185ee7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -33583,10 +33584,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7080461735352267749, guid: 8218a49aaa4fd764e8e6308d5a185ee7, type: 3}
-      propertyPath: <onShopKeyPressed>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1258847453}
     - target: {fileID: 7080461735352267749, guid: 8218a49aaa4fd764e8e6308d5a185ee7, type: 3}
       propertyPath: <onInventoryKeyPressed>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

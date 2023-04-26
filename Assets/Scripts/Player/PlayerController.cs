@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     [Header("Interact Settings")]
     [SerializeField] float sizeOfInteractablearea = 1.5f;
     [SerializeField] LayerMask layerMask;
+    public GameObject canvasEmote;
 
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
 
         r2bd = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        canvasEmote.SetActive(false);
     }
 
     private void FixedUpdate()
