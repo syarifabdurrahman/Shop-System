@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timeText;
     [SerializeField] private TextMeshProUGUI moneyText;
     [SerializeField] private GameObject invetoryPanel;
+    [SerializeField] private GameObject shopPanel;
 
     private void Awake()
     {
@@ -23,13 +24,32 @@ public class UIManager : MonoBehaviour
         timeText.text = dayOfWeek.ToString().Substring(0, 3) + ", " + hour + ":" + minute;
     }
 
+    public void ToggleGameObject(GameObject gameObject, bool setActive)
+    {
+        gameObject.SetActive(setActive);
+    }
+
     public void InventoryOpen()
     {
-        invetoryPanel.SetActive(true);
+        ToggleGameObject(invetoryPanel, true);
+        PlayerController.instance.canMove = false;
     }
 
     public void InventoryClose()
     {
-        invetoryPanel.SetActive(false);
+        ToggleGameObject(invetoryPanel, false);
+        PlayerController.instance.canMove = true;
+    }
+
+    public void ShopOpen()
+    {
+        ToggleGameObject(shopPanel, true);
+        PlayerController.instance.canMove = false;
+    }
+
+    public void ShopClose()
+    {
+        ToggleGameObject(shopPanel, false);
+        PlayerController.instance.canMove = true;
     }
 }

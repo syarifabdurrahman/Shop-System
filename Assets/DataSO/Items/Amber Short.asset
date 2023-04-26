@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 449c1d869e964f84f8e770c7ebe531c0, type: 3}
-  m_Name: Cloth 1
+  m_Name: Amber Short
   m_EditorClassIdentifier: 
-  nameItem: Amber Torso
+  nameItem: Amber Short
   isStackable: 0
-  icon: {fileID: 708395550, guid: cf4c063081f9ad145808e0fb8ae13cd5, type: 3}
+  icon: {fileID: -618521668, guid: 7872372633ac2e040a0ba0d500b090e1, type: 3}
+  buyPrice: 50
+  sellPrice: 25

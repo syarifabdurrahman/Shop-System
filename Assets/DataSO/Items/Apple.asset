@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 449c1d869e964f84f8e770c7ebe531c0, type: 3}
-  m_Name: Cloth 2
+  m_Name: Apple
   m_EditorClassIdentifier: 
-  nameItem: Amber Short
-  isStackable: 0
-  icon: {fileID: -618521668, guid: 7872372633ac2e040a0ba0d500b090e1, type: 3}
+  nameItem: Apple
+  isStackable: 1
+  icon: {fileID: -1208705601, guid: 4dc35b2fa1bbb5e49a68e647bd84b45a, type: 3}
+  buyPrice: 100
+  sellPrice: 100

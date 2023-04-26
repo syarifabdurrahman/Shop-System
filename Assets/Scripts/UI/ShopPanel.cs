@@ -1,21 +1,13 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryPanel : MonoBehaviour
+public class ShopPanel : MonoBehaviour
 {
-    public static InventoryPanel instance;
-
     public ItemContainerSO itemContainer;
-    [SerializeField] private List<InventoryButton> buttons;
+    [SerializeField] private List<ShopButton> buttons;
 
-    private void Awake()
-    {
-        instance = this;
-    }
-
-    private void Update()
+    private void Start()
     {
         SetIndex();
         ShowUI();

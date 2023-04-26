@@ -6,6 +6,9 @@ using UnityEngine.Events;
 public class PlayerInputs : MonoBehaviour, IPlayerInput
 {
     [field: SerializeField]
+    public UnityEvent onPickupKeyPressed { get; set; }
+
+    [field: SerializeField]
     public UnityEvent onInventoryKeyPressed { get; set; }
 
     [field: SerializeField]
@@ -13,6 +16,7 @@ public class PlayerInputs : MonoBehaviour, IPlayerInput
 
     private void Update()
     {
+        GetPickupInput();
         GetMovementInput();
         GetInventoryInput();
     }
@@ -22,6 +26,14 @@ public class PlayerInputs : MonoBehaviour, IPlayerInput
         if (Input.GetAxisRaw("Inventory") > 0)
         {
             onInventoryKeyPressed?.Invoke();
+        }
+    }
+
+    private void GetPickupInput()
+    {
+        if (Input.GetAxisRaw("Pickup") > 0)
+        {
+            onPickupKeyPressed?.Invoke();
         }
     }
 

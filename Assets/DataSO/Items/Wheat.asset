@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 449c1d869e964f84f8e770c7ebe531c0, type: 3}
-  m_Name: Plant 1
+  m_Name: Wheat
   m_EditorClassIdentifier: 
   nameItem: Wheat
   isStackable: 1
   icon: {fileID: -463080689, guid: 39de872f7d341fd4186660c6630fa59e, type: 3}
+  buyPrice: 200
+  sellPrice: 200

@@ -7,7 +7,7 @@ using UnityEngine;
 [CustomEditor(typeof(ItemContainerSO))]
 public class ItemContainerEditor : Editor
 {
-    public override void onInspectorGUI()
+    public override void OnInspectorGUI()
     {
         ItemContainerSO container = target as ItemContainerSO;
 
@@ -19,5 +19,6 @@ public class ItemContainerEditor : Editor
                 container.slots[i].count = 0;
             }
         }
+        DrawDefaultInspector();
     }
 }

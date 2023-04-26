@@ -27,6 +27,7 @@ public class ItemContainerSO : ScriptableObject
                 itemSlot = slots.Find(x => x.itemDataSO == null);
                 if (itemSlot != null)
                 {
+                    itemSlot.itemDataSO = item;
                     itemSlot.count = count;
                 }
             }
@@ -39,6 +40,41 @@ public class ItemContainerSO : ScriptableObject
             if (itemSlot != null)
             {
                 itemSlot.itemDataSO = item;
+            }
+        }
+    }
+
+    public void Sell(ItemSO item, int count = 1)
+    {
+        if (item.isStackable)
+        {
+            ItemSlot itemSlot = slots.Find(x => x.itemDataSO == item);
+            if (itemSlot != null)
+            {
+                itemSlot.count -= count;
+
+                if (itemSlot.count <= 0)
+                {
+                    itemSlot.itemDataSO = null;
+                    itemSlot.count = 0;
+                }
+            }
+            else
+            {
+                itemSlot = slots.Find(x => x.itemDataSO == null);
+                if (itemSlot != null)
+                {
+                    itemSlot.count = count;
+                }
+            }
+        }
+        else
+        {
+            // removing non stackable item
+            ItemSlot itemSlot = slots.Find(x => x.itemDataSO == null);
+            if (itemSlot != null)
+            {
+                itemSlot.itemDataSO = null;
             }
         }
     }
