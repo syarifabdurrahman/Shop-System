@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a4830a954ee17845b4c577b06983cd0, type: 3}
+  m_Name: Regular Container
+  m_EditorClassIdentifier: 
+  slots:
+  - itemDataSO: {fileID: 11400000, guid: f8822a9e0cf47144687ea08eb0f7a736, type: 2}
+    count: 0
+  - itemDataSO: {fileID: 11400000, guid: b5b2218d013429c489ef92c99c101735, type: 2}
+    count: 0
+  - itemDataSO: {fileID: 11400000, guid: 2e7a1deb9e255444faa344ff588fb217, type: 2}
+    count: 10
+  - itemDataSO: {fileID: 11400000, guid: 97986080e31f3754aa87035f73722694, type: 2}
+    count: 10
+  - itemDataSO: {fileID: 11400000, guid: ed5c1b1916df91c43a752ce5279036e2, type: 2}
+    count: 100
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0
+  - itemDataSO: {fileID: 0}
+    count: 0

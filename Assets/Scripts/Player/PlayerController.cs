@@ -3,12 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerController : MonoBehaviour, IPlayerInput
+public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
-
-    [field: SerializeField]
-    public UnityEvent<Vector2> OnMovementKeyPressed { get; set; }
 
     private Rigidbody2D r2bd;
 
@@ -25,19 +22,10 @@ public class PlayerController : MonoBehaviour, IPlayerInput
         instance = this;
     }
 
-    private void Update()
-    {
-        GetMovementInput();
-    }
 
     private void FixedUpdate()
     {
         r2bd.velocity = speed * Time.deltaTime * movementDirection.normalized;
-    }
-
-    private void GetMovementInput()
-    {
-        OnMovementKeyPressed?.Invoke(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")));
     }
 
     public void MovePlayer(Vector2 movementInput)
