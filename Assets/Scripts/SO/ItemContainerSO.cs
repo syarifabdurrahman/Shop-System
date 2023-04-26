@@ -71,7 +71,7 @@ public class ItemContainerSO : ScriptableObject
         else
         {
             // removing non stackable item
-            ItemSlot itemSlot = slots.Find(x => x.itemDataSO == null);
+            ItemSlot itemSlot = slots.Find(x => x.itemDataSO == item);
             if (itemSlot != null)
             {
                 itemSlot.itemDataSO = null;

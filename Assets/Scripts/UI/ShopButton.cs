@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using TMPro;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.UI;
 using static UnityEditor.Progress;
@@ -46,9 +47,20 @@ public class ShopButton : MonoBehaviour
     {
         // Check price here
 
-        if (InventoryPanel.instance.itemContainer != null)
+        if (CurrencyManager.instance.coin > slot.itemDataSO.buyPrice)
         {
-            InventoryPanel.instance.itemContainer.Add(slot.itemDataSO, 1);
+            if (InventoryPanel.instance.itemContainer != null)
+            {
+                InventoryPanel.instance.itemContainer.Add(slot.itemDataSO, 1);
+            }
+
+            CurrencyManager.instance.coin -= slot.itemDataSO.buyPrice;
+
+            StartCoroutine(DelayOnOff($"You Bough Some {slot.itemDataSO.nameItem}"));
+        }
+        else
+        {
+            StartCoroutine(DelayOnOff("Not Enough Coin!"));
         }
     }
 
@@ -56,10 +68,36 @@ public class ShopButton : MonoBehaviour
     {
         // Check price here
 
-        if (InventoryPanel.instance.itemContainer != null)
+        ItemSlot itemSlot = InventoryPanel.instance.itemContainer.slots.Find(x => x.itemDataSO == slot.itemDataSO);
+
+        if (itemSlot != null && itemSlot.count >= 0)
         {
-            InventoryPanel.instance.itemContainer.Sell(slot.itemDataSO, 1);
+            if (InventoryPanel.instance.itemContainer != null)
+            {
+                InventoryPanel.instance.itemContainer.Sell(slot.itemDataSO, 1);
+            }
+
+            StartCoroutine(DelayOnOff($"You Sell Some {slot.itemDataSO.nameItem}"));
+
+            CurrencyManager.instance.coin += slot.itemDataSO.sellPrice;
         }
+        else
+        {
+            StartCoroutine(DelayOnOff($"You don't have {slot.itemDataSO.nameItem}"));
+        }
+
+
+    }
+
+    private IEnumerator DelayOnOff(string info)
+    {
+        StopCoroutine(DelayOnOff(info));
+
+        UIManager.Instance.feedbackShopText.text = info;
+
+        yield return new WaitForSeconds(.5f);
+
+        UIManager.Instance.feedbackShopText.text = "";
     }
 
 }

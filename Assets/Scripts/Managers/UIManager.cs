@@ -10,13 +10,22 @@ public class UIManager : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private TextMeshProUGUI timeText;
-    [SerializeField] private TextMeshProUGUI moneyText;
     [SerializeField] private GameObject invetoryPanel;
     [SerializeField] private GameObject shopPanel;
+    [SerializeField] private TextMeshProUGUI moneyText;
+    [SerializeField] private TextMeshProUGUI moneyTextShop;
+    public TextMeshProUGUI feedbackShopText;
 
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        invetoryPanel.SetActive(false);
+        shopPanel.SetActive(false);
+        feedbackShopText.text = "";
     }
 
     public void UpdateTime(DayOfWeek dayOfWeek, string hour, string minute)
@@ -52,4 +61,12 @@ public class UIManager : MonoBehaviour
         ToggleGameObject(shopPanel, false);
         PlayerController.instance.canMove = true;
     }
+
+    #region Coin
+    public void UpdateCoinUI(int coin)
+    {
+        moneyText.text = coin.ToString() + " CN";
+        moneyTextShop.text = moneyText.text;
+    }
+    #endregion
 }
