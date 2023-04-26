@@ -16,4 +16,4 @@ Basic input:
 ![](2023-04-27-04-39-02.png)
 
 ## Brief Document
-Brief Document.pdf
+[Brief Document.pdf](https://github.com/syarifabdurrahman/Shop-System/blob/8677c095edc4268dc397389aa2adc9f61046aa2a/Brief%20Document.pdf)
